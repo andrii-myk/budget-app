@@ -5,8 +5,11 @@
   "author": "Andrew M",
   "license": "MIT",
   "scripts": {
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod",
     "serve": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json --watchAll"
   },
@@ -46,6 +49,8 @@
     "enzyme-to-json": "^3.4.4",
     "jest": "^25.5.2",
     "jest-enzyme": "^7.1.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
     "react-test-renderer": "^16.13.1"
   }
 }

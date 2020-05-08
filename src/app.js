@@ -8,11 +8,9 @@ import 'react-dates/lib/css/_datepicker.css'
 
 import AppRouter from './routers/AppRouter'
 import configureStore from './store/configureStore'
-import { addExpense, removeExpense, editExpense } from './actions/expenses'
-import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from './actions/filters'
-import getVisibleExpenses from './selectors/expenses'
 
 const store = configureStore()
+console.log('test');
 
 const jsx = (
     <Provider store={store}>
